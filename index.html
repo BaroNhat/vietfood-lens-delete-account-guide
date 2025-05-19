@@ -1,18 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html> <!-- Thêm lang="vi" nếu Tiếng Việt là mặc định -->
 <head>
     <meta charset="UTF-8">
-    <title>Account Deletion Guide / Hướng dẫn Xóa tài khoản - Vietfood Lens</title>
+    <title>Account Deletion & Data Management Guide / Hướng dẫn Xóa tài khoản & Quản lý dữ liệu - Vietfood Lens</title>
     <style>
         body {font-family: sans-serif; padding: 20px; line-height: 1.6;}
         .container {max-width: 800px; margin: 0 auto;}
-        .lang-section {margin-bottom: 40px; padding: 20px; border: 1px solid #eee; border-radius: 5px;}
-        .lang-section h1 {margin-top: 0;}
+        .lang-section {margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #ddd;}
+        .lang-section:last-child {border-bottom: none; margin-bottom: 0;}
+        .lang-section h1, .lang-section h2, .lang-section h3 {margin-top: 0; color: #333;}
+        .lang-section h1 {font-size: 1.8em;}
+        .lang-section h2 {font-size: 1.5em; margin-top: 25px;}
+        .lang-section h3 {font-size: 1.2em; margin-top: 20px; color: #555;}
         ol, ul {padding-left: 20px;}
         strong {font-weight: bold;}
-        .lang-switcher {margin-bottom: 20px; text-align: right;}
-        .lang-switcher a {margin-left: 10px; text-decoration: none; color: blue; cursor: pointer;}
+        .lang-switcher {margin-bottom: 20px; text-align: right; padding-bottom:10px; border-bottom:1px solid #eee;}
+        .lang-switcher a {margin-left: 10px; text-decoration: none; color: #007bff; cursor: pointer; font-weight: bold;}
+        .lang-switcher a:hover {text-decoration: underline;}
         .hidden {display: none;}
+        .contact-info {margin-top: 30px; font-size: 0.9em; color: #555;}
     </style>
 </head>
 <body>
@@ -24,8 +30,10 @@
 
         <!-- TIẾNG VIỆT -->
         <div class="lang-section" id="vi-content">
-            <h1>Hướng dẫn Xóa tài khoản Vietfood Lens</h1>
-            <p>Bạn có thể yêu cầu xóa tài khoản Vietfood Lens và các dữ liệu liên quan trực tiếp từ bên trong ứng dụng. Vui lòng làm theo các bước sau:</p>
+            <h1>Hướng dẫn Xóa tài khoản & Quản lý dữ liệu Vietfood Lens</h1>
+            
+            <h2>Xóa toàn bộ tài khoản</h2>
+            <p>Bạn có thể yêu cầu xóa toàn bộ tài khoản Vietfood Lens và tất cả dữ liệu liên quan trực tiếp từ bên trong ứng dụng. Vui lòng làm theo các bước sau:</p>
             <ol>
                 <li>Mở ứng dụng Vietfood Lens trên thiết bị của bạn.</li>
                 <li>Đi tới mục <strong>Profile</strong> (Hồ sơ) ở thanh điều hướng dưới cùng.</li>
@@ -34,20 +42,47 @@
                 <li>Đọc kỹ thông tin cảnh báo trong hộp thoại xác nhận. Bạn có thể sẽ được yêu cầu xác nhận qua OTP gửi về email đã đăng ký.</li>
                 <li>Làm theo các bước hướng dẫn trên màn hình để hoàn tất việc xóa tài khoản.</li>
             </ol>
-            <p><strong>Khi bạn xóa tài khoản:</strong></p>
+            <p><strong>Khi bạn xóa toàn bộ tài khoản:</strong></p>
             <ul>
                 <li>Thông tin tài khoản của bạn (tên người dùng, họ tên, email, ảnh đại diện nếu có) sẽ bị xóa.</li>
-                <li>Lịch sử nhận diện món ăn của bạn sẽ bị xóa.</li>
-                <li>Các ảnh bạn đã tải lên cho mục đích nhận diện hoặc lịch sử sẽ bị xóa.</li>
+                <li>Toàn bộ lịch sử nhận diện món ăn của bạn sẽ bị xóa.</li>
+                <li>Tất cả các ảnh bạn đã tải lên cho mục đích nhận diện hoặc lịch sử sẽ bị xóa.</li>
+                <li>Các món ăn và nhà hàng trong mục Yêu thích của bạn sẽ bị xóa.</li>
                 <li>Dữ liệu đã được ẩn danh hoàn toàn dùng cho việc cải thiện mô hình AI (nếu bạn đã đồng ý trước đó) có thể không bị xóa nhưng sẽ không còn liên kết với tài khoản của bạn.</li>
             </ul>
-            <p>Nếu bạn có bất kỳ câu hỏi nào hoặc gặp khó khăn trong quá trình xóa tài khoản, vui lòng liên hệ với chúng tôi qua email: <a href="mailto:adminnhat@unime.site">adminnhat@unime.site</a>.</p>
+
+            <h2 id="manage-data-vi">Quản lý và Xóa một phần dữ liệu</h2>
+            <p>Ngoài việc xóa toàn bộ tài khoản, Vietfood Lens cho phép bạn quản lý và xóa một số loại dữ liệu cụ thể trực tiếp từ bên trong ứng dụng mà không cần xóa tài khoản:</p>
+            
+            <h3>1. Xóa từng mục trong Lịch sử Nhận diện</h3>
+            <p>Bạn có thể xóa các mục riêng lẻ khỏi lịch sử nhận diện món ăn của mình:</p>
+            <ul>
+                <li>Đi tới mục <strong>"History"</strong> (Lịch sử).</li>
+                <li>Nhấn vào biểu tượng <strong>thùng rác</strong> <span style="color:red;">🗑️</span> bên cạnh mục đó.</li>
+                <li>Một hộp thoại xác nhận sẽ xuất hiện, nhấn nút <strong>"Xoá"</strong> để hoàn tất.</li>
+            </ul>
+
+            <h3>2. Xóa Món ăn/Nhà hàng khỏi Mục Yêu thích (Favorites)</h3>
+            <p>Để xóa một món ăn hoặc nhà hàng đã lưu khỏi danh sách yêu thích của bạn:</p>
+            <ul>
+                <li>Đi tới mục <strong>"Favorites"</strong> (Yêu thích).</li>
+                <li>Tìm món ăn hoặc nhà hàng bạn muốn xóa.</li>
+                <li>Nhấn vào biểu tượng <strong>thùng rác</strong> <span style="color:red;">🗑️</span> bên cạnh mục đó.</li>
+                <li>Một hộp thoại xác nhận sẽ xuất hiện, nhấn nút <strong>"Xoá"</strong> để hoàn tất.</li>
+            </ul>
+            <p>Các hành động trên sẽ xóa dữ liệu tương ứng khỏi tài khoản của bạn. Việc này không ảnh hưởng đến các dữ liệu khác hoặc tài khoản Vietfood Lens của bạn.</p>
+            
+            <div class="contact-info">
+            <p>Nếu bạn có bất kỳ câu hỏi nào hoặc gặp khó khăn trong quá trình quản lý hay xóa dữ liệu/tài khoản, vui lòng liên hệ với chúng tôi qua email: <a href="mailto:adminnhat@unime.site">adminnhat@unime.site</a>.</p>
+            </div>
         </div>
 
         <!-- ENGLISH -->
         <div class="lang-section hidden" id="en-content">
-            <h1>Vietfood Lens Account Deletion Guide</h1>
-            <p>You can request to delete your Vietfood Lens account and associated data directly from within the app. Please follow these steps:</p>
+            <h1>Vietfood Lens Account Deletion & Data Management Guide</h1>
+
+            <h2>Deleting Your Entire Account</h2>
+            <p>You can request to delete your entire Vietfood Lens account and all associated data directly from within the app. Please follow these steps:</p>
             <ol>
                 <li>Open the Vietfood Lens app on your device.</li>
                 <li>Navigate to the <strong>Profile</strong> section (bottom navigation bar).</li>
@@ -56,36 +91,61 @@
                 <li>Carefully read the warning information in the confirmation dialog. You may be asked to confirm via an OTP sent to your registered email.</li>
                 <li>Follow the on-screen instructions to complete the account deletion process.</li>
             </ol>
-            <p><strong>When you delete your account:</strong></p>
+            <p><strong>When you delete your entire account:</strong></p>
             <ul>
                 <li>Your account information (username, full name, email, profile picture if any) will be deleted.</li>
-                <li>Your food recognition history will be deleted.</li>
-                <li>Photos you uploaded for recognition or history purposes will be deleted.</li>
+                <li>Your entire food recognition history will be deleted.</li>
+                <li>All photos you uploaded for recognition or history purposes will be deleted.</li>
+                <li>Your favorited dishes and restaurants will be removed.</li>
                 <li>Fully anonymized data used for AI model improvement (if you previously consented) may not be deleted but will no longer be linked to your account.</li>
             </ul>
-            <p>If you have any questions or encounter difficulties during the account deletion process, please contact us via email: <a href="mailto:adminnhat@unime.site">adminnhat@unime.site</a>.</p>
+
+            <h2 id="manage-data-en">Managing and Deleting Partial Data</h2>
+            <p>In addition to deleting your entire account, Vietfood Lens allows you to manage and delete specific types of your data directly from within the app without deleting your account:</p>
+
+            <h3>1. Deleting Individual Items from Recognition History</h3>
+            <p>You can delete individual entries from your food recognition history:</p>
+            <ul>
+                <li>Navigate to the <strong>"History"</strong> section.</li>
+                <li>Tap the <strong>trash can icon</strong> <span style="color:red;">🗑️</span> next to that item.</li>
+                <li>A confirmation dialog will appear, tap the <strong>\"Remove"</strong> button to complete.</li>
+            </ul>
+
+            <h3>2. Removing Dishes/Restaurants from Favorites</h3>
+            <p>To remove a saved dish or restaurant from your favorites list:</p>
+            <ul>
+                <li>Navigate to the <strong>"Favorites"</strong> section.</li>
+                <li>Find the dish or restaurant you want to remove.</li>
+                <li>Tap the <strong>trash can icon</strong> <span style="color:red;">🗑️</span> next to that item.</li>
+                <li>A confirmation dialog will appear, tap the <strong>\"Remove"</strong> button to complete.</li>
+            </ul>
+            <p>The actions above will remove the corresponding data from your account. This does not affect other data or your Vietfood Lens account.</p>
+
+            <div class="contact-info">
+            <p>If you have any questions or encounter difficulties while managing or deleting your data/account, please contact us via email: <a href="mailto:adminnhat@unime.site">adminnhat@unime.site</a>.</p>
+            </div>
         </div>
     </div>
 
     <script>
         function switchLang(lang) {
+            var viContent = document.getElementById('vi-content');
+            var enContent = document.getElementById('en-content');
             if (lang === 'vi') {
-                document.getElementById('vi-content').classList.remove('hidden');
-                document.getElementById('en-content').classList.add('hidden');
+                viContent.classList.remove('hidden');
+                enContent.classList.add('hidden');
                 document.documentElement.lang = 'vi';
             } else if (lang === 'en') {
-                document.getElementById('en-content').classList.remove('hidden');
-                document.getElementById('vi-content').classList.add('hidden');
+                enContent.classList.remove('hidden');
+                viContent.classList.add('hidden');
                 document.documentElement.lang = 'en';
             }
         }
-        // Set default language based on browser or a preference
-        // For simplicity, defaulting to Vietnamese if browser lang is vi, else English
-        var userLang = navigator.language || navigator.userLanguage;
+        var userLang = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
         if (userLang.startsWith('vi')) {
             switchLang('vi');
         } else {
-            switchLang('en'); // Default to English if not Vietnamese
+            switchLang('en');
         }
     </script>
 </body>
