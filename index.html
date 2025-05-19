@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Account Deletion Guide / Hướng dẫn Xóa tài khoản - Vietfood Lens</title>
+    <style>
+        body {font-family: sans-serif; padding: 20px; line-height: 1.6;}
+        .container {max-width: 800px; margin: 0 auto;}
+        .lang-section {margin-bottom: 40px; padding: 20px; border: 1px solid #eee; border-radius: 5px;}
+        .lang-section h1 {margin-top: 0;}
+        ol, ul {padding-left: 20px;}
+        strong {font-weight: bold;}
+        .lang-switcher {margin-bottom: 20px; text-align: right;}
+        .lang-switcher a {margin-left: 10px; text-decoration: none; color: blue; cursor: pointer;}
+        .hidden {display: none;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="lang-switcher">
+            <a onclick="switchLang('vi')">Tiếng Việt</a>
+            <a onclick="switchLang('en')">English</a>
+        </div>
+
+        <!-- TIẾNG VIỆT -->
+        <div class="lang-section" id="vi-content">
+            <h1>Hướng dẫn Xóa tài khoản Vietfood Lens</h1>
+            <p>Bạn có thể yêu cầu xóa tài khoản Vietfood Lens và các dữ liệu liên quan trực tiếp từ bên trong ứng dụng. Vui lòng làm theo các bước sau:</p>
+            <ol>
+                <li>Mở ứng dụng Vietfood Lens trên thiết bị của bạn.</li>
+                <li>Đi tới mục <strong>Profile</strong> (Hồ sơ) ở thanh điều hướng dưới cùng.</li>
+                <li>Trong màn hình Profile, nhấn vào mục <strong>"My account"</strong> (Tài khoản của tôi) hoặc một mục tương tự để vào trang chỉnh sửa thông tin cá nhân (<strong>Edit Profile</strong>).</li>
+                <li>Trên trang <strong>"Edit Profile"</strong> (Chỉnh sửa hồ sơ), cuộn xuống và tìm nút <strong>"Delete Account"</strong> (Xóa tài khoản).</li>
+                <li>Đọc kỹ thông tin cảnh báo trong hộp thoại xác nhận. Bạn có thể sẽ được yêu cầu xác nhận qua OTP gửi về email đã đăng ký.</li>
+                <li>Làm theo các bước hướng dẫn trên màn hình để hoàn tất việc xóa tài khoản.</li>
+            </ol>
+            <p><strong>Khi bạn xóa tài khoản:</strong></p>
+            <ul>
+                <li>Thông tin tài khoản của bạn (tên người dùng, họ tên, email, ảnh đại diện nếu có) sẽ bị xóa.</li>
+                <li>Lịch sử nhận diện món ăn của bạn sẽ bị xóa.</li>
+                <li>Các ảnh bạn đã tải lên cho mục đích nhận diện hoặc lịch sử sẽ bị xóa.</li>
+                <li>Dữ liệu đã được ẩn danh hoàn toàn dùng cho việc cải thiện mô hình AI (nếu bạn đã đồng ý trước đó) có thể không bị xóa nhưng sẽ không còn liên kết với tài khoản của bạn.</li>
+            </ul>
+            <p>Nếu bạn có bất kỳ câu hỏi nào hoặc gặp khó khăn trong quá trình xóa tài khoản, vui lòng liên hệ với chúng tôi qua email: <a href="mailto:adminnhat@unime.site">adminnhat@unime.site</a>.</p>
+        </div>
+
+        <!-- ENGLISH -->
+        <div class="lang-section hidden" id="en-content">
+            <h1>Vietfood Lens Account Deletion Guide</h1>
+            <p>You can request to delete your Vietfood Lens account and associated data directly from within the app. Please follow these steps:</p>
+            <ol>
+                <li>Open the Vietfood Lens app on your device.</li>
+                <li>Navigate to the <strong>Profile</strong> section (bottom navigation bar).</li>
+                <li>On the Profile screen, tap on <strong>"My account"</strong> or a similar option to access your personal information editing page (<strong>Edit Profile</strong>).</li>
+                <li>On the <strong>"Edit Profile"</strong> page, scroll down and find the <strong>"Delete Account"</strong> button.</li>
+                <li>Carefully read the warning information in the confirmation dialog. You may be asked to confirm via an OTP sent to your registered email.</li>
+                <li>Follow the on-screen instructions to complete the account deletion process.</li>
+            </ol>
+            <p><strong>When you delete your account:</strong></p>
+            <ul>
+                <li>Your account information (username, full name, email, profile picture if any) will be deleted.</li>
+                <li>Your food recognition history will be deleted.</li>
+                <li>Photos you uploaded for recognition or history purposes will be deleted.</li>
+                <li>Fully anonymized data used for AI model improvement (if you previously consented) may not be deleted but will no longer be linked to your account.</li>
+            </ul>
+            <p>If you have any questions or encounter difficulties during the account deletion process, please contact us via email: <a href="mailto:adminnhat@unime.site">adminnhat@unime.site</a>.</p>
+        </div>
+    </div>
+
+    <script>
+        function switchLang(lang) {
+            if (lang === 'vi') {
+                document.getElementById('vi-content').classList.remove('hidden');
+                document.getElementById('en-content').classList.add('hidden');
+                document.documentElement.lang = 'vi';
+            } else if (lang === 'en') {
+                document.getElementById('en-content').classList.remove('hidden');
+                document.getElementById('vi-content').classList.add('hidden');
+                document.documentElement.lang = 'en';
+            }
+        }
+        // Set default language based on browser or a preference
+        // For simplicity, defaulting to Vietnamese if browser lang is vi, else English
+        var userLang = navigator.language || navigator.userLanguage;
+        if (userLang.startsWith('vi')) {
+            switchLang('vi');
+        } else {
+            switchLang('en'); // Default to English if not Vietnamese
+        }
+    </script>
+</body>
+</html>
